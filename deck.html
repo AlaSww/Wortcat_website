@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="deck.js"></script>
+    <script src="header.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    <div id="header"></div>
+    <script>loadHeader()</script>
+    <main>
+        <div class="operations-header" style="display: block;">
+            <div class="path-container " >
+                <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Home /</a>
+                <a href=""><h3 id="deck-name"></h3></a>
+            </div>
+            <div class="top-deck-info">
+                <h1 id="big-deck-name" ></h1>
+                <p id="description"></p>
+            </div>
+        </div>
+        <div class="deck-stats-container">
+            <div class="today-cards-container">
+                <h1 style="font-size: 45px;margin-bottom: 0;">55</h1>
+                <h4 style="margin-top: 10px;">cards for today</h4>
+            </div>
+            <div class="progress-cards">
+                <div class="progress-card not-studied">
+                  <div class="count"><i class="fa-solid fa-notes-medical" style="color: grey;"></i> 7</div>
+                  <div class="label">Not studied</div>
+                </div>
+                
+                <div class="progress-card learning">
+                  <div class="count"><i class="fa-solid fa-clock-rotate-left" style="color: rgb(0, 219, 0);"></i> 17</div>
+                  <div class="label">Learning</div>
+                </div>
+                
+                <div class="progress-card mastered">
+                  <div class="count"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 132, 255);"></i> 20</div>
+                  <div class="label">Mastered</div>
+                </div>
+              </div>
+            <button class="start-button">Study cards</button>
+        </div>
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass" style="color: grey;"></i>
+            <input type="text" name="search" id="search" placeholder="search for a card">
+        </div>
+    </main>
+</body>
+</html>

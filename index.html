@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="app.js"></script>
+    <script src="header.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>loadHeader()</script>
+    <main>
+        <div class="operations-header">
+            <h1 style="text-align: left;">HOME</h1>
+            <div>
+                <button id="edit-button" ><i class="fa-solid fa-pen"></i></button>
+                <button id="create-button"><i class="fa-solid fa-plus"></i>Create</button>
+            </div>
+            
+            <div class="modal-container" id="deck-modal">
+                <div class="model">
+                    <h1>New Deck</h1>
+                        <input type="text" name="deck-title" id="deck-title" placeholder="Title" required>
+                        <input type="text" name="deck-description" id="deck-description" placeholder="Description" required>
+                        <button class="submit-button" id="submit-deck">Submit</button>
+                        <button id="cancel-deck" class="submit-button" style="background-color: rgb(218, 218, 218);color: rgb(88, 88, 88);">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="decks-container">
+            
+        </div>
+    </main>
+</body>
+</html>
