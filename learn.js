@@ -1,5 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const deckId = urlParams.get('id');
+document.addEventListener('DOMContentLoaded',()=>{
+  const returnToDeck=document.getElementById('return-to-deck');
+  returnToDeck.href='deck.html?id='+deckId;
+})
+
+function updateProgressBar(currentIndex, total) {
+  const percent = ((currentIndex + 1) / total) * 100;
+  document.getElementById('progress-bar').style.width = percent + '%';
+}
 
 getCards().then(cardsMap => {
     const cards = Array.from(cardsMap.values());
@@ -9,6 +18,9 @@ getCards().then(cardsMap => {
         if (currentIndex >= cards.length) {
             window.location.href='deck.html?id='+deckId;
         }
+        updateProgressBar(currentIndex-1, cards.length); 
+        document.getElementById('current-number').textContent = currentIndex + 1;
+        document.getElementById('total-number').textContent = cards.length;
         
         const currentCard = cards[currentIndex];
         console.log(currentCard.id);

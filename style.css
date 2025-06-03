@@ -50,7 +50,7 @@ main{
 #stats-button:hover{
     color: black;
 }
-#profile-button{
+#auth-button{
     background-color: rgb(151, 151, 151);
     height :45px;
     width: 45px;
@@ -481,4 +481,18 @@ main{
   }
   .flashcard-container button{
     margin-top: 50%;
+  }
+  #progress-container {
+    width: 50%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+    border-radius: 10px;
   }

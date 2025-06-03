@@ -1,3 +1,4 @@
+
 async function loadHeader() {
     try {
       const response = await fetch('header.html');
