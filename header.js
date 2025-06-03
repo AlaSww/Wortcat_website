@@ -38,7 +38,6 @@ async function loadHeader() {
     const learntWords = document.getElementById("learnt-words");
   
     const stats = await getStats();
-    console.log(stats);
   
     streakValue.innerText = stats.streak ?? "0";
     bestStreakValue.innerText = stats.longestStreak ?? "0";

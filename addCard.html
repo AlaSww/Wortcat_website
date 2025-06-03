@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="header.js"></script>
+    <script src="addDeck.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <script>loadHeader()</script>
+    <main>
+        <div class="operations-header">
+            <div class="path-container " >
+                <a href=""  class="back-home" id="return-deck-arrow"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="index.html" class="back-home"> Home /</a>
+                <a href="" class="back-home" id="return-to-deck"><span style="color: black;font-weight: bold;">/Add new Card</span></a>
+            </div>
+            <button  id="save-button" class="back-home" ><i class="fa-solid fa-check" style="background-color: rgb(89, 199, 89);color: white;" ></i></button>
+        </div>
+        <div class="card-inputs-container">
+            <h4>Front Side</h4>
+            <textarea name="card-front" id="card-front" class="card-input"></textarea>
+            <h4>Back</h4>
+            <textarea name="card-back" id="card-back" class="card-input"></textarea>
+        </div>
+    </main>
+</body>
+</html>

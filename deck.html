@@ -8,7 +8,6 @@
     <script src="header.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 <body>
     <div id="header"></div>
@@ -26,31 +25,34 @@
         </div>
         <div class="deck-stats-container">
             <div class="today-cards-container">
-                <h1 style="font-size: 45px;margin-bottom: 0;">55</h1>
+                <h1 style="font-size: 45px;margin-bottom: 0;" id="cards-for-today"></h1>
                 <h4 style="margin-top: 10px;">cards for today</h4>
             </div>
             <div class="progress-cards">
                 <div class="progress-card not-studied">
-                  <div class="count"><i class="fa-solid fa-notes-medical" style="color: grey;"></i> 7</div>
+                  <div class="count" id="not-studied"></div>
                   <div class="label">Not studied</div>
                 </div>
                 
                 <div class="progress-card learning">
-                  <div class="count"><i class="fa-solid fa-clock-rotate-left" style="color: rgb(0, 219, 0);"></i> 17</div>
+                  <div class="count" id="learning"></div>
                   <div class="label">Learning</div>
                 </div>
                 
                 <div class="progress-card mastered">
-                  <div class="count"><i class="fa-solid fa-graduation-cap" style="color: rgb(0, 132, 255);"></i> 20</div>
+                  <div class="count" id="mastered"></div>
                   <div class="label">Mastered</div>
                 </div>
               </div>
-            <button class="start-button">Study cards</button>
+            <button class="start-button" id="study-button">Study cards</button>
         </div>
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass" style="color: grey;"></i>
             <input type="text" name="search" id="search" placeholder="search for a card">
         </div>
+        <div id="cards-container">
+        </div>
     </main>
+    <a id="create-card">Create Card</a>
 </body>
 </html>

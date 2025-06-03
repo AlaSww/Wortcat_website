@@ -1,5 +1,6 @@
 button{
     border: none;
+    cursor: pointer;
 }
 #stat-button{
     background: none;
@@ -34,7 +35,8 @@ main{
     width:100%;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     padding-top: 20px;
 }
 #stats-button{
@@ -60,7 +62,7 @@ main{
     cursor: pointer;
 }
 .operations-header{
-    width: 70%;
+    width: 50%;
     margin: 0 auto; 
     display: flex;
     justify-content: space-between; 
@@ -71,7 +73,7 @@ main{
     margin-top: 20px;
     padding-top: 30px;
     background-color: white;
-    width: 70%;
+    width: 50%;
     border-radius: 10px; 
 }
 #create-button{
@@ -204,6 +206,7 @@ main{
     height: 200%;
     margin-top: -40px;
 }
+
 .path-container{
     display: flex;
     justify-content: left;
@@ -238,7 +241,7 @@ main{
     margin-top: 20px;
     padding-top: 30px;
     background-color: white;
-    width: 70%;
+    width: 50%;
     border-radius: 30px; 
     color: #353535;
 }
@@ -255,6 +258,7 @@ main{
     transition: transform 0.2s, box-shadow 0.3s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
+
 .progress-cards {
     display: flex;
     gap: 200px;
@@ -284,7 +288,7 @@ main{
     display: flex;
     margin-top:20px ;
     justify-content: flex-start;
-    width: 68%;
+    width: 48%;
     background-color: #dfdfdf;
     height: 50px;
     border-radius: 30px;
@@ -301,3 +305,180 @@ main{
 #search:focus{
     outline: none;
 }
+#cards-container{
+    width:50%;
+    cursor: pointer;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 70px;
+    font-size: 22px;
+    align-items: center;
+    border: 1px solid rgb(214, 214, 214);
+}
+.card:hover{
+    background-color: #f0f0f0;
+}
+.card *{
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.card h5{
+    color: grey;
+    text-align: left;
+}
+.card button{
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+.options-container {
+    display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+    position: absolute;
+    background: white;
+    z-index: 10;
+    max-width: 120px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding-top: 10px;
+  }
+.option{
+    width: 70%;
+    height: 60px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    cursor: pointer;
+    text-align: left;
+    align-items: left;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px;
+}
+.option:last-child{
+    border:none;
+}
+.option:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+#create-card{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.582);
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 200px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-inputs-container{
+    background-color: white;
+    color: grey;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.card-input{
+    width: 100%;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    border-radius: 20px;
+    height: 200px;
+    resize:none;
+    text-align: center;
+    font-size: 20px;
+}
+.flashcard-container {
+    font-family: Arial, sans-serif;
+    background: white;
+    width: 50%;
+    height: 600px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .flashcard-prompt {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .flashcard-answer {
+    font-size: 18px;
+    display: none;
+    margin-top: 20px;
+    border-top: 1px solid rgb(190, 190, 190);
+  }
+  
+  .flashcard-reveal-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    background: #2c2c2c;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .flashcard-buttons {
+    display: none;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .flashcard-btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 80px;
+  }
+  
+  .flashcard-again {
+    background: #ffe6ea;
+    color: #d40000;
+  }
+  
+  .flashcard-hard {
+    background: #fffbe6;
+    color: #a37b00;
+  }
+  
+  .flashcard-good {
+    background: #e6fff3;
+    color: #008c5f;
+  }
+  
+  .flashcard-easy {
+    background: #e6f0ff;
+    color: #0057d9;
+  }
+  .flashcard-container button{
+    margin-top: 50%;
+  }
